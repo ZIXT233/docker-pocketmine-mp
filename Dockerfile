@@ -14,7 +14,7 @@ RUN adduser --gecos 'PocketMine-MP' --disabled-password --home /pocketmine pocke
 WORKDIR /pocketmine
 RUN mkdir /pocketmine/PocketMine-MP
 RUN chown -R pocketmine:pocketmine /pocketmine
-
+VOLUME ["/pocketmine/PocketMine-MP"]
 COPY assets/server.properties /pocketmine/server.properties.original
 COPY assets/entrypoint.sh /pocketmine/entrypoint.sh
 
